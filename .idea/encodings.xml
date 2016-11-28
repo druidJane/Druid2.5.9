@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/Druid2.5/dao" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Druid2.5/interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Druid2.5/pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Druid2.5/service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Druid2.5/web" charset="UTF-8" />
   </component>
 </project>
