@@ -22,6 +22,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="core" />
         <module name="dao" />
         <module name="interface" />
         <module name="pojo" />
@@ -31,7 +32,9 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="com.druid.mall" target="1.8" />
+      <module name="core" target="1.8" />
       <module name="dao" target="1.8" />
+      <module name="Druid2.5" target="1.8" />
       <module name="interface" target="1.8" />
       <module name="pojo" target="1.8" />
       <module name="service" target="1.8" />

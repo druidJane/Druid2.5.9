@@ -1,6 +1,8 @@
 package com.druid.model;
 
-import com.druid.model.core.BaseModel;
+
+import com.druid.core.exception.BusiException;
+import com.druid.core.model.BaseModel;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +13,7 @@ import javax.persistence.Id;
  * Created by 1115 on 2016/11/25.
  */
 @Entity
-public class Account extends BaseModel{
+public class Account extends BaseModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -27,6 +29,11 @@ public class Account extends BaseModel{
     @Override
     public String toString() {
         return null;
+    }
+
+    @Override
+    public String getTableName() throws BusiException {
+        return "account";
     }
 
     public Account(String name, String password, String no) {

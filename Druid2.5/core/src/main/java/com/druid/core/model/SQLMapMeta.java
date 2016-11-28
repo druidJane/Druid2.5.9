@@ -1,4 +1,4 @@
-package com.druid.model.core;
+package com.druid.core.model;
 
 import java.io.Serializable;
 

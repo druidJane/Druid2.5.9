@@ -11,5 +11,16 @@
 
     <artifactId>service</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.druid</groupId>
+            <artifactId>core</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.druid</groupId>
+            <artifactId>interface</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+    </dependencies>
 </project>

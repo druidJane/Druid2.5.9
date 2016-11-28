@@ -1,8 +1,9 @@
-package com.druid.config;
+package com.druid.core.config;
 
-import com.druid.support.CustomRepositoryFactoryBean;
+import com.druid.core.support.CustomRepositoryFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.orm.jpa.JpaProperties;
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;
@@ -33,14 +34,19 @@ public class JpaPrimaryConfig {
     @Qualifier("primaryDataSource")
     private DataSource primaryDataSource;
 
+    @Autowired
+    @Qualifier("defaultDataSource")
+    private DataSource defaultDataSource;
+
     @Bean(name="entityManagerPrimary")
     public EntityManager entityManager(EntityManagerFactoryBuilder builder){
         return entityManagerFactoryPrimary(builder).getObject().createEntityManager();
     }
     @Bean(name="entityManagerFactoryPrimary")
     public LocalContainerEntityManagerFactoryBean entityManagerFactoryPrimary(EntityManagerFactoryBuilder builder){
-        return builder.dataSource(primaryDataSource)
-                .properties(getVendorProperties(primaryDataSource))
+        DataSource dataSource = primaryDataSource!=null?primaryDataSource:defaultDataSource;
+        return builder.dataSource(dataSource)
+                .properties(getVendorProperties(dataSource))
                 .packages("com.druid.model")//设置实体类所在位置
                 .persistenceUnit("primaryPersistenceUnit")
                 .build();

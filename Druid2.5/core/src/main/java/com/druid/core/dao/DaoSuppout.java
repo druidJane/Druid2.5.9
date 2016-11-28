@@ -1,9 +1,8 @@
-package com.druid.support;
+package com.druid.core.dao;
 
-import com.druid.util.ApplicationContextHolder;
+import com.druid.core.utils.ApplicationContextHolder;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
 
 /**
  * Created by druid on 27/11/16.
