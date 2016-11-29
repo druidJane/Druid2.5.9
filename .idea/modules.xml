@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Druid2.5/com.druid.mall.iml" filepath="$PROJECT_DIR$/Druid2.5/com.druid.mall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Druid2.5/core/core.iml" filepath="$PROJECT_DIR$/Druid2.5/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Druid2.5/dao/dao.iml" filepath="$PROJECT_DIR$/Druid2.5/dao/dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Druid2.5/interface/interface.iml" filepath="$PROJECT_DIR$/Druid2.5/interface/interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Druid2.5/pojo/pojo.iml" filepath="$PROJECT_DIR$/Druid2.5/pojo/pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Druid2.5/service/service.iml" filepath="$PROJECT_DIR$/Druid2.5/service/service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Druid2.5/web/web.iml" filepath="$PROJECT_DIR$/Druid2.5/web/web.iml" />
+    </modules>
+  </component>
+</project>

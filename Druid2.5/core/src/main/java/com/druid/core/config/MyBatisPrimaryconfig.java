@@ -9,8 +9,10 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
@@ -24,6 +26,7 @@ import java.util.Properties;
  * Created by druid on 24/11/16.
  */
 @Configuration
+@MapperScan("com.druid.mapper")
 public class MyBatisPrimaryconfig  implements TransactionManagementConfigurer{
     @Autowired
     @Qualifier("primaryDataSource")
